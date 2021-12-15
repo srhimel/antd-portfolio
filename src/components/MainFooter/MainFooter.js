@@ -4,7 +4,7 @@ import useThemeContext from '../../hooks/useThemeContext';
 import { Footer, FooterBottom } from '../styles/element.styled';
 import { Container } from '../styles/layout.styled';
 import { List, Avatar } from 'antd';
-import { Form, Input, Button } from 'antd';
+import { Form, Input, Button, message } from 'antd';
 import { SendOutlined } from '@ant-design/icons';
 const data = [
   {
@@ -23,10 +23,11 @@ const MainFooter = () => {
 
 
 
-
+  const [form] = Form.useForm();
 
   const onFinish = (values) => {
-    console.log(values);
+    message.success("Message Sent Successfully!");
+    form.resetFields();
   }
 
   const layout = {
@@ -87,13 +88,14 @@ const MainFooter = () => {
             </Col>
             <Col style={{ marginLeft: 'auto' }} lg={8} md={8} sm={24} xs={24}>
               <h2>Contact Me</h2>
-              <Form  {...layout} name="nest-messages" onFinish={onFinish}>
+              <Form form={form} {...layout} name="nest-messages" onFinish={onFinish}>
                 <Form.Item
                   name={['user', 'name']}
                   label="Name"
                   rules={[
                     {
                       required: true,
+                      message: 'Please input your name!'
                     },
                   ]}
                 >
@@ -106,12 +108,13 @@ const MainFooter = () => {
                     {
                       required: true,
                       type: 'email',
+                      message: 'Please input your email!'
                     },
                   ]}
                 >
                   <Input placeholder="Your email address" />
                 </Form.Item>
-                <Form.Item name={['user', 'introduction']} label="Your Message">
+                <Form.Item name={['user', 'message']} label="Your Message">
                   <Input.TextArea placeholder="Send me a message" />
                 </Form.Item>
                 <Form.Item>

@@ -1,9 +1,18 @@
 import React from 'react';
+import { SectionLight } from '../../components/styles/element.styled';
+import { Container } from '../../components/styles/layout.styled';
+import useThemeContext from '../../hooks/useThemeContext';
+import BlogSection from '../Home/BlogSection/BlogSection';
 
 const Blogs = () => {
+    const { theme } = useThemeContext();
     return (
         <div>
-            this is blog
+            <SectionLight theme={theme} padding="80px 0">
+                <Container>
+                    <BlogSection />
+                </Container>
+            </SectionLight>
         </div>
     );
 };

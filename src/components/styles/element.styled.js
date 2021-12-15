@@ -58,8 +58,8 @@ export const HeroSection = styled.div`
         color: ${props => props.theme === "dark" ? '#fff' : 'rgba(0, 0, 0, 0.85)'};
         transition: all 0.3s, width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
         p,
-        span,
         h2,
+        .social-links svg,
         div
         {
             color: ${props => props.theme === "dark" ? '#fff' : 'rgba(0, 0, 0, 0.85)'};

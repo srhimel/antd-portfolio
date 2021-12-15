@@ -59,8 +59,8 @@ const Hero = () => {
             <div className="cta-button">
                 <Fade bottom delay={1100}>
                     <Space size="middle" align="center" wrap style={{ justifyContent: 'center', marginTop: 30 }}>
-                        <Button type="primary" shape="round" size="large" icon={<CloudDownloadOutlined />}>Download Resume</Button>
-                        <Button type="default" shape="round" size="large" icon={<LinkedinFilled />}>Visit Linkedin</Button>
+                        <Button type="primary" target="_blank" href="https://drive.google.com/file/d/1knyoHX7HPke62vzL-G6-tVVqDd-Kc66K/view?usp=sharing" shape="round" size="large" icon={<CloudDownloadOutlined />}>Download Resume</Button>
+                        <Button target="_blank" href="https://www.linkedin.com/in/srhimel/" type="default" shape="round" size="large" icon={<LinkedinFilled />}>Visit Linkedin</Button>
                     </Space>
 
                 </Fade>

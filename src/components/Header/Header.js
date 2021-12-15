@@ -53,7 +53,7 @@ const Header = () => {
                         </Menu>
                     </div>
                     <div className="theme-switch">
-                        <Switch checkedChildren="dark" unCheckedChildren="light" defaultChecked onChange={() => theme === "light" ? setTheme('dark') : setTheme("light")} />
+                        <Switch checkedChildren="🌜" unCheckedChildren="🌞" defaultChecked onChange={() => theme === "light" ? setTheme('dark') : setTheme("light")} style={{ fontSize: 24 }} />
                     </div>
                     <div className="mobile-menu">
                         <Button shape="circle" type="primary" onClick={showDrawer}>

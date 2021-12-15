@@ -89,6 +89,11 @@ export const HeroWrapper = styled.div`
             font-size: 3rem;
             margin-bottom: 0px;
         }
+        @media (max-width:450px){
+            font-size: 2rem;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
     }
     .my-name h1 div:nth-child(2){
         .react-reveal span{
